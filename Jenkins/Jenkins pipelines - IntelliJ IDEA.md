@@ -1,15 +1,18 @@
-# Автодополнение и проверка синтаксиса в Intelij IDEA для GDSL
+# Intelij IDEA для разработки pipelines для Jenkins 
 
 Разрабатывать Pipeline в самом Jenkins(в вебке) то еще удовольствие. 
 
 Как сделать разработку намного удобнее.
 
-- [Установка Groovy](#install-Groovy)
-   - [Установка Groovy на RHEL 7](#groovy-rhel7)
-- [Создание нового Groovy проекта для разработки pipeline](#new-project)
-- [Автодополнение при написании Jenkinsfile](#autocompletion) 
+- [Установка Groovy](#Установка-Groovy)
+   - [Установка Groovy на RHEL 7](#Установка-Groovy-на-RHEL-7)
+- [Создание нового Groovy проекта для разработки pipeline](#Создание-нового-Groovy-проекта-для-разработки-pipeline)
+- [Автодополнение при написании Jenkinsfile](#Автодополнение-при-написании-Jenkinsfile) 
    - [Автодополнение для Scripted Pipeline Syntax](#Автодополнение-для-Scripted-Pipeline-Syntax)
-
+   - [Автодополнение для Declarative Pipeline Syntax](#Автодополнение-для-Declarative-Pipeline-Syntax)
+- [Отладка Pipeline без постояныых коммитов](#Отладка-Pipeline-без-постояныых-коммитов)  
+   - [Python HTTP сервер](#Python-HTTP-сервер)
+   - [Загрузка Jenkinsfile на лету](#Загрузка-Jenkinsfile-на-лету)
 ## Установка Groovy
 
 
@@ -137,7 +140,7 @@ contributor(closures)
 Что очень удобно.
 
 
-# Отладка Pipeline без постояныых коммитов.
+## Отладка Pipeline без постояныых коммитов.
 
 В Jenkins не так много вариантов, как подтянуть Jenkinsfile. Как вариант разместить
 
@@ -149,7 +152,7 @@ Jenkinsfile в Git с помощью **Pipeline Script from SCM**. Это удо
 
 Я решил так
 
-## HTTP сервер
+### Python HTTP сервер
 
 Для начала устанавливаю 2 пакета из репозитория.
 
@@ -168,6 +171,8 @@ Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 HTTP сервер поднят. Можно открыть браузер и проверить, что файлы доступны.
 
 ![http files](images/http_files.png)
+
+### Загрузка Jenkinsfile на лету
 
 А в Jenkins подключаем скрипт с помощью метода load
 ```groovy
