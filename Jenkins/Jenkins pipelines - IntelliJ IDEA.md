@@ -5,9 +5,10 @@
 Как сделать разработку намного удобнее.
 
 - [Установка Groovy](#install-Groovy)
-  - [Установка Groovy на RHEL 7](#groovy-rhel7)
+   - [Установка Groovy на RHEL 7](#groovy-rhel7)
 - [Создание нового Groovy проекта для разработки pipeline](#new-project)
 - [Автодополнение при написании Jenkinsfile](#autocompletion) 
+   - [Автодополнение для Scripted Pipeline Syntax](#Автодополнение-для-Scripted-Pipeline-Syntax)
 
 ## Установка Groovy
 
